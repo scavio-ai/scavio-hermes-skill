@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "scavio",
+  "version": "0.1.0",
+  "description": "Structured web data for Hermes Agent: web search, page extraction, and structured commerce, social, travel, jobs, real-estate, app-store, ad-library and company-filing data across 31 platforms plus Extract, with one API key. Ships five research skills.",
+  "author": {
+    "name": "Scavio",
+    "url": "https://scavio.dev"
+  },
+  "homepage": "https://scavio.dev/docs",
+  "repository": "https://github.com/scavio-ai/hermes-agent",
+  "license": "MIT",
+  "keywords": [
+    "web scraping",
+    "search api",
+    "structured data",
+    "web data",
+    "serp",
+    "youtube",
+    "reddit",
+    "amazon"
+  ],
+  "extensions": {
+    "dev.scavio": {
+      "skills": "./skills/",
+      "mcpConfigSnippet": "./config/hermes.config.snippet.yaml"
+    }
+  }
+}

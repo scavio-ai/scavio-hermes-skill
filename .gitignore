@@ -1,0 +1,15 @@
+.env
+.env.local
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
+.idea/
+.vscode/
+
+# contains live third-party API keys - never commit
+.mcp.json
+
+# local agent config - internal instructions, memory, and machine-local settings.
+# never publish: this folder ships as the public scavio-ai/hermes-agent repo.
+.claude/

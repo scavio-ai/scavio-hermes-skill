@@ -1,0 +1,31 @@
+name: Lint skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install skills-ref
+        run: |
+          pip install --upgrade pip
+          pip install git+https://github.com/agentskills/agentskills.git#subdirectory=skills-ref
+
+      - name: Validate all skills
+        run: |
+          set -e
+          for skill_dir in skills/*/; do
+            echo "Validating $skill_dir"
+            skills-ref validate "$skill_dir"
+          done

@@ -1,0 +1,77 @@
+# Scavio MCP server configuration for Hermes Agent
+# Merge into ~/.hermes/config.yaml under the top-level mcp_servers key.
+#
+# Auth: set SCAVIO_API_KEY in ~/.hermes/.env (or your shell environment).
+# Get a key at https://dashboard.scavio.dev/sign-up?utm_source=hermes
+#
+# There is no transport key. Hermes infers the transport: a server with `url`
+# is HTTP, a server with `command` is stdio.
+
+mcp_servers:
+  scavio:
+    url: https://mcp.scavio.dev/mcp
+    headers:
+      # The hosted MCP server authenticates with x-api-key.
+      x-api-key: "${SCAVIO_API_KEY}"
+
+      # Which platforms the server registers at all. Additive against the
+      # keyword `default` (11 platforms, 106 tools); `all` registers all 191.
+      # Covers every platform the five skills in this repo actually call. Widen or
+# trim to taste - an unlisted tool is simply not registered, it does not error.
+      x-scavio-platforms: "extract,google,youtube,amazon,walmart,reddit"
+
+    # Second, narrower filter applied client-side. Without it the picker
+    # carries every tool the six platforms above register, which is far more
+    # than the skills need and costs context in every session.
+    #
+    # Drop this block to expose the full platform surface, or add tool names
+    # to widen it. Names must match the server exactly.
+    tools:
+      include:
+        # Google
+        - search_google
+        - google_news
+        # Amazon
+        - search_amazon
+        - get_amazon_product
+        - get_amazon_offers
+        # Walmart
+        - search_walmart
+        - get_walmart_product
+        - get_walmart_reviews
+        # YouTube
+        - search_youtube
+        - get_youtube_video
+        - get_youtube_transcript
+        - get_youtube_comments
+        # Reddit
+        - search_reddit
+        - get_reddit_post
+        - get_reddit_post_comments
+        - get_reddit_subreddit_posts
+        # eBay - sold listings for real transaction prices
+        - search_ebay
+        - get_ebay_product
+        # Target
+        - search_target_products
+        - get_target_product
+        # Home Depot
+        - search_home_depot
+        - get_home_depot_product
+        # G2 / Capterra - B2B software comparison
+        - search_g2_software
+        - get_g2_product
+        - search_capterra_software
+        - get_capterra_product
+        # LinkedIn / Indeed - company and hiring signal
+        - get_linkedin_company
+        - search_indeed_jobs
+        # App stores
+        - search_app_store
+        - search_google_play
+        # X
+        - search_x
+        # Any URL to markdown, text, or HTML
+        - extract_url
+        # Credit balance and plan
+        - get_usage
