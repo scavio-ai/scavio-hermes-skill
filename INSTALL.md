@@ -41,7 +41,7 @@ This repo carries an Agent Plugins 1.0.0 `plugin.json` at its root, so Hermes
 can install it directly:
 
 ```sh
-hermes plugins install scavio-ai/hermes-agent
+hermes plugins install scavio-ai/scavio-hermes-skill
 ```
 
 That pulls the repo and picks up the five skills under `skills/`. You still
@@ -53,7 +53,7 @@ below if the plugin install does not wire it up on your Hermes version.
 **1. Clone the repo.**
 
 ```sh
-git clone https://github.com/scavio-ai/hermes-agent.git
+git clone https://github.com/scavio-ai/scavio-hermes-skill.git
 cd hermes-agent
 ```
 

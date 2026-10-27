@@ -4,6 +4,13 @@ Structured web data across 31 platforms plus an Extract endpoint for any URL,
 exposed as MCP tools and ready-to-use skills for
 [Hermes Agent](https://hermes-agent.nousresearch.com/).
 
+A community plugin maintained by Scavio. Not affiliated with Nous Research or
+the official [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent).
+
+Requires a Scavio API key: 50 free credits on signup (one time, no credit
+card), then paid plans from $30/month for 7,000 credits. See
+[Pricing](#pricing).
+
 Built on the open [Agent Skills](https://agentskills.io) standard, so the same
 skills also run in Claude, Cursor, Goose, OpenHands, and other compatible
 clients.
@@ -54,7 +61,7 @@ echo "SCAVIO_API_KEY=sk_live_xxxxxxxxxxxx" >> ~/.hermes/.env
 chmod 600 ~/.hermes/.env
 
 # 3. Install this repo as a Hermes plugin
-hermes plugins install scavio-ai/hermes-agent
+hermes plugins install scavio-ai/scavio-hermes-skill
 ```
 
 Prefer to wire it up by hand, or want to tune which tools load? See
@@ -125,6 +132,6 @@ MIT. See [LICENSE](LICENSE).
 
 ## Support
 
-- Issues and feature requests: [GitHub issues](https://github.com/scavio-ai/hermes-agent/issues)
+- Issues and feature requests: [GitHub issues](https://github.com/scavio-ai/scavio-hermes-skill/issues)
 - Scavio API docs: [scavio.dev/docs](https://scavio.dev/docs?utm_source=hermes)
 - Hermes Agent: [hermes-agent.nousresearch.com](https://hermes-agent.nousresearch.com/)

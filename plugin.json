@@ -8,7 +8,7 @@
     "url": "https://scavio.dev"
   },
   "homepage": "https://scavio.dev/docs",
-  "repository": "https://github.com/scavio-ai/hermes-agent",
+  "repository": "https://github.com/scavio-ai/scavio-hermes-skill",
   "license": "MIT",
   "keywords": [
     "web scraping",
