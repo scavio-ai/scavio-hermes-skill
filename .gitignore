@@ -11,5 +11,5 @@ node_modules/
 .mcp.json
 
 # local agent config - internal instructions, memory, and machine-local settings.
-# never publish: this folder ships as the public scavio-ai/hermes-agent repo.
+# never publish: this folder ships as the public scavio-ai/scavio-hermes-skill repo.
 .claude/

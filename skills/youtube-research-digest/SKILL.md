@@ -6,7 +6,7 @@ metadata:
   author: scavio
   version: "1.1"
   requires: scavio-mcp
-  homepage: https://github.com/scavio-ai/hermes-agent
+  homepage: https://github.com/scavio-ai/scavio-hermes-skill
 ---
 
 # YouTube research digest
